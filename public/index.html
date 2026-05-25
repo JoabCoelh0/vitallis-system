@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitallis - Sistema de Gestão Terapêutica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <h1>Vitallis</h1>
+                    <p class="subtitle">Sistema de Gestão Terapêutica</p>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" data-page="home">Início</a></li>
+                    <li><a href="#" data-page="dashboard">Dashboard</a></li>
+                    <li><a href="#" data-page="patients">Pacientes</a></li>
+                    <li><a href="#" data-page="settings">Configurações</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="container">
+                <div id="content">
+                    <section id="home-page" class="page active">
+                        <h2>Bem-vindo ao Vitallis</h2>
+                        <p>Sistema de gestão terapêutica com integração Firebase.</p>
+                        <button id="btnGetStarted" class="btn btn-primary">Começar</button>
+                    </section>
+
+                    <section id="dashboard-page" class="page" style="display:none;">
+                        <h2>Dashboard</h2>
+                        <p>Análise e estatísticas do sistema.</p>
+                    </section>
+
+                    <section id="patients-page" class="page" style="display:none;">
+                        <h2>Pacientes</h2>
+                        <div id="patientsList"></div>
+                    </section>
+
+                    <section id="settings-page" class="page" style="display:none;">
+                        <h2>Configurações</h2>
+                        <form id="settingsForm"></form>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Vitallis. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+    <script src="../firebase/config.js"></script>
+    <script src="../src/main.js"></script>
+</body>
+</html>
